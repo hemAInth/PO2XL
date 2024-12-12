@@ -157,7 +157,7 @@ if image_data:
             df.to_excel(buffer, index=False, engine='openpyxl')
             buffer.seek(0)
 
-            Download button
+            # Download button
             st.download_button(
                 label="Download as Excel",
                 data=buffer,
