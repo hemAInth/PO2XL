@@ -1,14 +1,8 @@
 streamlit
 google-generativeai
 python-dotenv
-tempfile
-os
-PIL
-fitz
+PyMuPDF
 openpyxl
 io
 xlsxwriter
-#langchain
 PyPDF2
-#chromadb
-#faiss-cpu
