@@ -12,8 +12,9 @@ import io
 from io import StringIO
 
 # Load environment variables from .env file
-load_dotenv()
-api_key = os.getenv("GOOGLE_API_KEY")
+# load_dotenv()
+# api_key = os.getenv("GOOGLE_API_KEY")
+api_key = st.secrets["GOOGLE_API_KEY"]
 
 def get_po_details(image_parts):
     try:
@@ -85,7 +86,6 @@ def process_pdf(uploaded_file):
         st.error(f"Error processing PDF: {e}")
         return None
 
-# Setting the Streamlit app background colour
 # Setting the Streamlit app background colour
 gradient_css = """
 <style>
