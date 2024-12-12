@@ -163,7 +163,7 @@ if image_data:
             #     data=buffer,
             #     file_name="data.xlsx",
             #     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-            )
+            # )
         else:
             st.error("The response is empty. Unable to extract data.")
     
