@@ -153,17 +153,17 @@ if image_data:
             st.dataframe(df)
 
             # Save to Excel as a downloadable file
-            # buffer = io.BytesIO()  # Create an in-memory buffer
-            # df.to_excel(buffer, index=False, engine='openpyxl')
-            # buffer.seek(0)
+            buffer = io.BytesIO()  # Create an in-memory buffer
+            df.to_excel(buffer, index=False, engine='openpyxl')
+            buffer.seek(0)
 
-            # Download button
-            # st.download_button(
-            #     label="Download as Excel",
-            #     data=buffer,
-            #     file_name="data.xlsx",
-            #     mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-            # )
+            Download button
+            st.download_button(
+                label="Download as Excel",
+                data=buffer,
+                file_name="data.xlsx",
+                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+            )
         else:
             st.error("The response is empty. Unable to extract data.")
     
