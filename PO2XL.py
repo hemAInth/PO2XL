@@ -1,3 +1,7 @@
+# Copyright (c) 2024 Hemanth Garikapati
+# Unauthorized copying, sharing, or redistribution of this code is prohibited.
+# For Licensing inquiries, contact hemanthgarikapati@gmail.com
+
 # Importing all the required packages/libraries
 import streamlit as st
 import os
