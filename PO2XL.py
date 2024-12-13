@@ -140,7 +140,7 @@ if image_data:
        
         # Validate and parse the response
         if response.strip():  # Ensure response is not empty
-            df = pd.read_csv(StringIO(response),sep=None, engine='python')
+            df = pd.read_csv(StringIO(response), engine='python')
 
             # Remove unnamed columns dynamically
             df = df.loc[:, ~df.columns.str.contains('^Unnamed')]
