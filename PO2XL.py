@@ -38,7 +38,7 @@ def get_po_details(image_parts):
                         Present the information as a clean, 
                         table-like DataFrame output in plain text.
                         Do not include any code or extra lines. 
-                        Format the table to resemble a typical DataFrame displayed in Python terminals.
+                        Format the table to resemble a typical DataFrame displayed in Python terminals, keep the delimiter '|'.
                         Map Vendor Name and Vendor City to all the other details.
                        """
         response = model.generate_content([image_parts[0], input_prompt])
@@ -140,7 +140,7 @@ if image_data:
        
         # Validate and parse the response
         if response.strip():  # Ensure response is not empty
-            df = pd.read_csv(StringIO(response), engine='python')
+            df = pd.read_csv(StringIO(response), delimiter = '|')
 
             # Remove unnamed columns dynamically
             df = df.loc[:, ~df.columns.str.contains('^Unnamed')]
